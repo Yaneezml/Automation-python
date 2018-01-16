@@ -1,0 +1,29 @@
+  [{
+        "Item": {
+          "VHCode": "AM601",
+          "RuleOptionCode": "BURCAITHNESSLEATHER"
+
+        }
+    },
+    {
+        "Item": {
+           "VHCode": "AM601",
+          "RuleOptionCode": "BURCAITHNESSLEATHER"
+        }
+    },  {
+        "Item": {
+           "VHCode": "AM601",
+          "RuleOptionCode": "BURCAITHNESSLEATHER2"
+        }
+    },  {
+        "Item": {
+           "VHCode": "AM601",
+          "RuleOptionCode": "BURCAITHNESSLEATHER2"
+        }
+    },  {
+        "Item": {
+           "VHCode": "AM601",
+          "RuleOptionCode": "BURCAITHNESSLEATHER2"
+        }
+    }
+    ]
