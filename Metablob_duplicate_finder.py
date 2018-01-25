@@ -3,7 +3,9 @@ import sys
 
 from pprint import pprint
 
-data = json.load(open('duplicates.json'))
+
+with open('testfile.json') as data_file:
+    data = json.load(data_file)
 
 
 def iterate(data):
@@ -12,7 +14,8 @@ def iterate(data):
         val = data[index]
         for index2 in range(index + 1, len(data)):
             val2 = data[index2]
-            if (val['Item']['RuleOptionCode'] == val2['Item']['RuleOptionCode']) and \
+            if (val['Action'] == val2['Action']) and \
+                    (val['Item']['RuleOptionCode'] == val2['Item']['RuleOptionCode']) and \
                     (val['Item']['VHCode'] == val2['Item']['VHCode']) and \
                     (val['Item']['RuleType'] == val2['Item']['RuleType']) and \
                     (val['Item']['MasterOptionCode'] == val2['Item']['MasterOptionCode']) and \
@@ -22,9 +25,11 @@ def iterate(data):
                     (val['Item']['SecondaryEnvCode'] == val2['Item']['SecondaryEnvCode']) and \
                     (val['Item']['AttributeValue'] == val2['Item']['AttributeValue']) and \
                     (val['Item']['Modifier'] == val2['Item']['Modifier']):
-                duplicates.append(val)
-
+                duplicates.append(val["Id"] + " - " + val2["Id"])
     return duplicates
 
 
-print('\n'.join(map(str, (iterate(data)))))
+print(data.keys())
+# print(iterate(data))
+
+print('\n'.join(map(str, (iterate(data["PatchRules"])))))
