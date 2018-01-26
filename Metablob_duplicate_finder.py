@@ -29,7 +29,13 @@ def iterate(data):
     return duplicates
 
 
-print(data.keys())
+print(datakjgbgbkjhlkhlkh
+
+      ?,[p',m;l;l#'
+          ''
+          ''
+          ''
+          ';lkm;lm'.keys())
 # print(iterate(data))
 
 print('\n'.join(map(str, (iterate(data["PatchRules"])))))
